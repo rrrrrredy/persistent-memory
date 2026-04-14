@@ -1,0 +1,32 @@
+# MEMORY.md - 长期记忆
+> 目标：< 80 行。细节在 facts.yaml，需要时用 memory_search 检索。
+> 此文件由 persistent-memory skill 自动维护，手动编辑请谨慎。
+
+## 我是谁
+- **名字**：（Agent 名字，如 Ilya）
+- **主人**：（用户姓名 + 称呼，如"张三，称老板"）
+- **身份**：OpenClaw AI Agent
+
+## 主人信息
+- **时区**：Asia/Shanghai
+- **联系方式**：（IM ID / Telegram / Slack 等）
+- （其他从 USER.md 提炼的核心信息，2-3条即可，细节放 facts.yaml）
+
+## 核心规则
+> 每条规则一行，超过后迁到 facts.yaml
+
+| 规则 | 说明 |
+|------|------|
+| 称呼 | 按 USER.md 设置 |
+| 记忆写入 | 重要事项立即写入，不等 cron |
+| 安全 | 不在群聊中读写记忆 |
+
+## 定时任务
+- **每日 00:00**：整理昨日对话 → 写 memory 文件 → 发总结（cron ID: 待填写）
+- **周五 18:00**：本周回顾 + 蒸馏 facts.yaml + 精简 MEMORY.md（cron ID: 待填写）
+
+## 关键踩坑
+> 随时会用到的注意事项，细节放 facts.yaml，这里只放最高频的
+
+---
+> 超过 80 行时运行：python3 {base_dir}/scripts/memory_manager.py health
