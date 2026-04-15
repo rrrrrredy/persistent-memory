@@ -1,10 +1,11 @@
 ---
 name: persistent-memory
+version: 4.0.0
 description: "管理 Agent 持久化记忆系统，三层蒸馏架构（每日日志→facts.yaml→MEMORY.md）。触发词：帮我记住、记一下、别忘了、你还记得、上次说的、初始化记忆系统、设置记忆、检查记忆、记忆系统健康吗。不适用：群聊或非 owner会话（安全隔离）；一次性问题；搜索/天气/写作等无需持久化的任务。"
 tags: [memory, persistent, facts, cron, daily-log]
 ---
 
-# 🦞 小龙虾的记忆 (persistent-memory) V4
+# 🦞 小龙虾的记忆 (persistent-memory) 4.0.0
 
 > 让你的 OpenClaw Agent 不再失忆。三层蒸馏架构，自动运行，无需用户操心。
 
@@ -398,23 +399,23 @@ $OPENCLAW_SESSION_DIR/*.jsonl (default: /mnt/openclaw/.openclaw/agents/main/sess
 
 ## 更新日志
 
-### V4.0 (2026-04-08)
+### 4.0.0 (2026-04-08)
 - description 从多行 block scalar `|` 改为单行（符合 description 设计原则）
 - 路由契约内容移入 SKILL.md 正文（新增 `## 路由契约` 章节）
 - 同步 `scripts/memory_manager.py` 从安装版到 workspace 版
 - 确认 `references/cron-setup.md` 存在
 - 新增 `tags`（[memory, persistent, facts, cron, daily-log]）
-- frontmatter: V3 → V4，H1 标题同步为 V4
+- frontmatter: 3.0.0 → 4.0.0，H1 标题同步为 V4
 
-### v3.0 (2026-04-08)
+### 3.0.0 (2026-04-08)
 - B5：新增独立 `### Gotchas` 专节（8条结构化踩坑）
 - B6：标准化 Hard Stop（统一格式）
 - B7：H1 标题加版本号 v3
 - D3：description 不触发边界加 ❌ 标记，格式更清晰
 - 行数控制：cron 配置 + facts.yaml 格式模板移至 `references/cron-setup.md`
-- frontmatter: V2 → V3
+- frontmatter: 2.0.0 → 3.0.0
 
-### v2.0 (2026-03-23)
+### 2.0.0 (2026-03-23)
 - 新增 `scripts/memory_manager.py`（init/digest/write-daily/facts/health/archive）
 - description 改为路由契约
 - 补充 session 日志路径和读取方法
@@ -426,5 +427,5 @@ $OPENCLAW_SESSION_DIR/*.jsonl (default: /mnt/openclaw/.openclaw/agents/main/sess
 - 新增 MEMORY.md 超限精简决策树
 - 新增首次安装 vs 已有记忆两条路径
 
-### v1.0 (2026-03-20)
+### 1.0.0 (2026-03-20)
 - 初版，三层记忆架构
