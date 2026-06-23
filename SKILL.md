@@ -1,8 +1,6 @@
 ---
 name: persistent-memory
-version: 4.0.0
-description: "管理 Agent 持久化记忆系统，三层蒸馏架构（每日日志→facts.yaml→MEMORY.md）。触发词：帮我记住、记一下、别忘了、你还记得、上次说的、初始化记忆系统、设置记忆、检查记忆、记忆系统健康吗。不适用：群聊或非 owner会话（安全隔离）；一次性问题；搜索/天气/写作等无需持久化的任务。"
-tags: [memory, persistent, facts, cron, daily-log]
+description: Use when the owner asks the agent to remember or recall durable personal/work facts ("帮我记住", "记一下", "别忘了", "你还记得吗"), initialize/check the memory system, or distill daily logs into facts.yaml and MEMORY.md. Trigger for memory persistence, facts extraction, memory hygiene, daily log distillation, and agent recall workflows. Not for group or non-owner sessions, one-off Q&A, vector database setup, or unrelated note-taking systems.
 ---
 
 # 🦞 小龙虾的记忆 (persistent-memory) 4.0.0
